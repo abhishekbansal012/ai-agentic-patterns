@@ -85,52 +85,6 @@ The workflow:
 
 ## 📁 Project Structure
 
-```
-src/
-├── agents/                # Core agent implementations
-│   ├── plannerAgent.ts
-│   ├── executorAgent.ts
-│   └── coordinatorAgent.ts
-├── patterns/             # Pattern implementations
-│   ├── reflection/
-│   ├── toolPattern/
-│   ├── multiAgent/
-│   └── planningPattern/
-├── core/                 # Core interfaces and types
-└── workflows/           # Workflow implementations
-```
-
-## 🔧 Configuration
-
-The system can be configured through:
-- Environment variables
-- Agent-specific parameters
-- OpenAI model settings
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI for providing the GPT-4 API
-- The AI community for inspiration and best practices
-
----
-
-## 📦 Tech Stack
-
-- **TypeScript**
-- **OpenAI API**
-- **Node.js (npm)**
-- **dotenv** for environment configuration
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -173,6 +127,39 @@ ai-agentic-pattern/
 ```
 
 ---
+
+## 🔧 Configuration
+
+The system can be configured through:
+- Environment variables
+- Agent-specific parameters
+- OpenAI model settings
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for providing the GPT-4 API
+- The AI community for inspiration and best practices
+
+---
+
+## 📦 Tech Stack
+
+- **TypeScript**
+- **OpenAI API**
+- **Node.js (npm)**
+- **dotenv** for environment configuration
+
+---
+
+
 
 ## 🚀 Getting Started
 
