@@ -6,8 +6,10 @@ import { MultiAgent } from '../patterns/multiAgent/multiAgent';
 import { PlanningPatternAgent } from '../patterns/planningPattern/planningPatternAgent';
 
 export class CoordinatorAgent {
+  
   planner = new PlannerAgent();
   executor = new ExecutorAgent();
+  
   reflection = new ReflectionAgent();
   toolPattern = new ToolPatternAgent();
   multiAgent = new MultiAgent();
