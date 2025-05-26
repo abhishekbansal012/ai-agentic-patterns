@@ -29,17 +29,40 @@ Powered by [OpenAI](https://platform.openai.com) and designed for extensibility,
 ```
 ai-agentic-pattern/
 ├── src/
-│   ├── agents/                # Specialized agents (Planner, Executor, Reflector, etc.)
-│   ├── core/                  # Interfaces, types, context/memory abstractions
-│   ├── tools/                 # Tool definitions and implementations
-│   ├── llm/                   # OpenAI integration
-│   ├── workflows/             # Orchestration logic
-│   ├── config/                # Constants and env loaders
-│   └── index.ts               # Main entry point
+│   ├── agents/                # Individual agent implementations
+│   │   ├── plannerAgent.ts
+│   │   ├── executorAgent.ts
+│   │   ├── reflectorAgent.ts
+│   │   └── coordinatorAgent.ts   # Multi-agent orchestrator
+│
+│   ├── core/                  # Core logic and abstractions
+│   │   ├── agent.ts           # Base agent interface
+│   │   ├── memory.ts          # Shared memory/context manager
+│   │   ├── types.ts           # Common types
+│   │   └── prompts.ts         # Prompt templates
+│
+│   ├── tools/                 # Tool integrations (e.g., web search, calculator)
+│   │   ├── webSearchTool.ts
+│   │   ├── calculatorTool.ts
+│   │   └── toolInterface.ts
+│
+│   ├── llm/                   # LLM wrapper (OpenAI SDK integration)
+│   │   └── openaiClient.ts
+│
+│   ├── workflows/             # End-to-end flows (e.g., planning → execution → reflection)
+│   │   └── taskRunner.ts
+│
+│   ├── config/                # Configuration files (env loader, constants)
+│   │   ├── env.ts
+│   │   └── constants.ts
+│
+│   └── index.ts               # Entry point
+│
 ├── .env                       # Environment variables
 ├── package.json
 ├── tsconfig.json
-└── README.md
+├── README.md
+
 ```
 
 ---
