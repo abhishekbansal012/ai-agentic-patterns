@@ -27,7 +27,6 @@ export class ToolPatternAgent implements Agent {
 Available tools:
 ${this.tools.map(tool => `- ${tool.name}: ${tool.description}`).join('\n')}
 
-For each tool you select, you must provide the exact input in the correct format as specified in the tool's description.
 Your response must be a valid JSON object in the following format:
 {
   "toolExecutions": [
@@ -55,7 +54,6 @@ Return ONLY the JSON object as specified, with no additional text.`;
 
     try {
       const content = response.choices[0].message.content || "{}";
-      // Clean the response to ensure it's valid JSON
       const jsonStr = content.trim().replace(/^```json\n?/, '').replace(/\n?```$/, '');
       const result = JSON.parse(jsonStr);
       return result.toolExecutions || [];
