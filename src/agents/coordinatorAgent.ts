@@ -31,7 +31,9 @@ export class CoordinatorAgent {
     const reflectionResult = await this.reflection.run(results.join(', '));
     console.log("\n🤔 Reflection Result:", reflectionResult);
     
-    const toolPatternResult = await this.toolPattern.run(reflectionResult);
+    const toolPatternResult = await this.toolPattern.run("I'm planning a trip to Paris next week. What's the weather like and how much is 100 USD in EUR?");
+    console.log("\n🛠️ ToolPatternResult:", toolPatternResult);
+    
     const multiAgentResult = await this.multiAgent.run(toolPatternResult);
     const planningPatternResult = await this.planningPattern.run(multiAgentResult);
     await this.reflection.run(planningPatternResult);
